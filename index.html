@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ahmed Design: Desarrollador web profesional al antojo del cliente.">
+    <title>Ahmed Design | New New Page</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="responsive.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="contenedor top-bar-inner">
+            <div class="top-logo">
+                <img src="logo obra.png" alt="Logo" style="height: 50px;">
+            </div>
+            <div class="top-info">
+                <div class="info-item"><a href="tel:+212614738881">📱 +212 614 738 881</a></div>
+                <div class="info-item"><a href="https://maps.google.com" target="_blank">📍 Ksar el Kebir</a></div>
+                <div class="info-item"><a href="mailto:mchebcheb2019@gmail.com">📧 mchebcheb2019@gmail.com</a></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="cabecera">
+        <div class="contenedor">
+            <div class="logo">
+                <h1>Ahmed <span>Design</span></h1>
+            </div>
+
+            <div class="menu-movil-icono" onclick="toggleMenu()">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="index.html" class="link active">Web</a></li>
+
+                    <li class="tiene-submenu">
+                        <a href="#">Servicios <i class='bx bx-chevron-down'></i></a>
+                        <ul class="submenu">
+                            <li><a href="index.html#diseno-web-slider">Diseño Web</a></li>
+                            <li><a href="index.html#seccion-desarrollo">Desarrollo</a></li>
+                            <li><a href="index.html#seccion-mantenimiento">Mantenimiento</a></li>
+                            <li><a href="index.html#seccion-hosting">Hosting</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="tiene-submenu">
+                        <a href="#">Páginas <i class='bx bx-chevron-down'></i></a>
+                        <ul class="submenu">
+                            <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+                            <li><a href="index.html#seccion-portafolio">Portafolio</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="index.html#seccion-blog">Blog</a></li>
+                    <li><a href="index.html#seccion-proyectos">proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-contenedor">
+            <div class="hero-texto">
+                <h1>Ahmed <span>Design</span></h1>
+                <p>Desde la casa <strong>Ahmed Design</strong> desarrollamos cualquier tipo de diseño web al antojo de
+                    cualquier cliente o empresa. Transformamos tus ideas en una presencia digital de alto impacto.</p>
+
+                <div class="hero-botones">
+                    <a href="contacto.html" class="btn btn-primario">Solicitar información</a>
+                    <a href="proyectos.html" class="btn btn-secundario">Ver proyectos</a>
+                </div>
+            </div>
+            <div class="hero-mockup">
+                <img src="mockup.png" alt="Diseño web profesional">
+            </div>
+        </section>
+        <section id="diseno-web-slider" class="seccion-slider">
+            <div class="contenedor-titulo">
+                <h2>Especialidades en <span class="resaltado">Diseño Web</span></h2>
+            </div>
+
+            <div class="slider-wrapper">
+                <div class="slider-track">
+                    <div class="card-diseno">
+                        <i class='bx bx-layout'></i>
+                        <h3>UI / UX Design</h3>
+                        <p>Interfaces intuitivas centradas en la experiencia del usuario final.</p>
+                    </div>
+                    <div class="card-diseno">
+                        <i class='bx bx-mobile-alt'></i>
+                        <h3>Responsive Design</h3>
+                        <p>Tu web se verá perfecta en móviles, tablets y ordenadores.</p>
+                    </div>
+                    <div class="card-diseno">
+                        <i class='bx bx-rocket'></i>
+                        <h3>Optimización Web</h3>
+                        <p>Velocidad de carga ultrarrápida para mejorar la retención.</p>
+                    </div>
+                    <div class="card-diseno">
+                        <i class='bx bx-search-alt'></i>
+                        <h3>SEO Estructural</h3>
+                        <p>Código limpio preparado para posicionar en los primeros lugares.</p>
+                    </div>
+
+                    <div class="card-diseno">
+                        <i class='bx bx-layout'></i>
+                        <h3>UI / UX Design</h3>
+                    </div>
+                    <div class="card-diseno">
+                        <i class='bx bx-mobile-alt'></i>
+                        <h3>Responsive Design</h3>
+                    </div>
+                    <div class="card-diseno">
+                        <i class='bx bx-rocket'></i>
+                        <h3>Optimización Web</h3>
+                    </div>
+                    <div class="card-diseno">
+                        <i class='bx bx-search-alt'></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="seccion-desarrollo" class="seccion-servicios-detalle">
+            <div class="contenedor">
+                <div class="contenedor-titulo">
+                    <h2>Ingeniería y <span class="resaltado">Desarrollo</span></h2>
+                </div>
+
+                <div class="grid-desarrollo">
+                    <div class="caja-desarrollo">
+                        <div class="icono-flotante"><i class='bx bx-code-alt'></i></div>
+                        <h3>Desarrollo Backend</h3>
+                        <p>Creación de arquitecturas sólidas y escalables. Gestión de bases de datos y lógica de
+                            servidor eficiente.</p>
+                        <ul class="lista-tech">
+                            <li><i class='bx bxl-nodejs'></i> Node.js</li>
+                            <li><i class='bx bxl-python'></i> Python</li>
+                            <li><i class='bx bxs-data'></i> SQL / NoSQL</li>
+                        </ul>
+                    </div>
+
+                    <div class="caja-desarrollo">
+                        <div class="icono-flotante"><i class='bx bxl-react'></i></div>
+                        <h3>Frontend Avanzado</h3>
+                        <p>Aplicaciones interactivas con los frameworks más modernos para una navegación fluida.</p>
+                        <ul class="lista-tech">
+                            <li><i class='bx bxl-react'></i> React</li>
+                            <li><i class='bx bxl-javascript'></i> JavaScript ES6+</li>
+                            <li><i class='bx bxl-tailwind-css'></i> Tailwind CSS</li>
+                        </ul>
+                    </div>
+
+                    <div class="caja-desarrollo">
+                        <div class="icono-flotante"><i class='bx bx-cloud-upload'></i></div>
+                        <h3>API & Cloud</h3>
+                        <p>Conexión de servicios externos y despliegue en la nube para disponibilidad total.</p>
+                        <ul class="lista-tech">
+                            <li><i class='bx bxl-aws'></i> AWS / Firebase</li>
+                            <li><i class='bx bx-transfer-alt'></i> REST APIs</li>
+                            <li><i class='bx bxl-docker'></i> Docker</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="seccion-mantenimiento" class="mantenimiento-fijo">
+            <div class="contenedor">
+                <div class="mantenimiento-header">
+                    <h2>Mantenimiento <span class="resaltado">Web</span></h2>
+                    <p>Optimización y seguridad total.</p>
+                </div>
+
+                <div class="mantenimiento-grid">
+                    <div class="mantenimiento-card">
+                        <i class='bx bx-shield-alt-2'></i>
+                        <h3>Seguridad</h3>
+                        <p>Protección contra ataques.</p>
+                    </div>
+                    <div class="mantenimiento-card">
+                        <i class='bx bx-refresh'></i>
+                        <h3>Updates</h3>
+                        <p>Plugins siempre al día.</p>
+                    </div>
+                    <div class="mantenimiento-card">
+                        <i class='bx bx-support'></i>
+                        <h3>Soporte</h3>
+                        <p>Asistencia técnica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="seccion-hosting" class="hosting-fijo">
+            <div class="contenedor">
+                <div class="hosting-header">
+                    <h2>Hosting <span class="resaltado">Premium</span></h2>
+                    <p>Velocidad y seguridad para que tu web nunca se detenga.</p>
+                </div>
+
+                <div class="hosting-grid">
+                    <div class="caja-hosting">
+                        <i class='bx bx-server'></i>
+                        <h3>Plan Básico</h3>
+                        <p>Ideal para webs corporativas y blogs personales.</p>
+                    </div>
+                    <div class="caja-hosting">
+                        <i class='bx bx-bolt-circle'></i>
+                        <h3>Plan Pro</h3>
+                        <p>Máxima velocidad con discos NVMe para tiendas online.</p>
+                    </div>
+                    <div class="caja-hosting">
+                        <i class='bx bx-cloud-upload'></i>
+                        <h3>Plan Cloud</h3>
+                        <p>Recursos dedicados para proyectos de alto tráfico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sobre-mi" class="sobre-mi-seccion">
+            <div class="contenedor">
+                <div class="sobre-mi-flex">
+                    <!-- Columna de Imagen/Visual -->
+                    <div class="sobre-mi-imagen">
+                        <div class="marco-estilizado">
+                            <i class='bx bx-code-alt'></i>
+                            <!-- Si tienes una foto tuya, cambia el <i> por una <img> -->
+                        </div>
+                    </div>
+
+                    <!-- Columna de Texto -->
+                    <div class="sobre-mi-contenido">
+                        <h2>Sobre <span class="resaltado">Mí</span></h2>
+                        <p class="subtitulo-personal">Compromiso, código y evolución constante.</p>
+
+                        <p>Desde principios de <strong>2023</strong>, emprendí un camino de aprendizaje y adaptación
+                            constante en el mundo del desarrollo web. Lo que empezó como un reto, se ha convertido en
+                            una pasión técnica donde el <strong>HTML, CSS y JavaScript</strong> son mis herramientas
+                            diarias.</p>
+
+                        <p>Especializado en diseño <strong>Responsive</strong>, he dedicado este tiempo a la creación de
+                            múltiples páginas web de todo tipo. Hoy, me siento plenamente capaz de materializar
+                            cualquier proyecto web al antojo y necesidad de cualquier cliente o empresa, garantizando
+                            resultados funcionales y modernos.</p>
+
+                        <div class="skills-line">
+                            <span>#HTML5</span>
+                            <span>#CSS3</span>
+                            <span>#JavaScript</span>
+                            <span>#ResponsiveDesign</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="seccion-portafolio" class="portafolio-fijo">
+            <div class="contenedor">
+                <div class="portafolio-header">
+                    <h2>Mi <span class="resaltado">Portafolio</span></h2>
+                    <p>Proyectos reales, soluciones a medida.</p>
+                </div>
+
+                <div class="portafolio-grid">
+                    <!-- Proyecto 1 -->
+                    <div class="caja-portafolio">
+                        <div class="portafolio-img">
+                            <i class='bx bx-layout'></i> <!-- Aquí iría una captura de la web -->
+                        </div>
+                        <div class="portafolio-info">
+                            <h3>E-commerce Pro</h3>
+                            <p>Tienda online con gestión de stock.</p>
+                        </div>
+                    </div>
+                    <!-- Proyecto 2 -->
+                    <div class="caja-portafolio">
+                        <div class="portafolio-img">
+                            <i class='bx bx-mobile-alt'></i>
+                        </div>
+                        <div class="portafolio-info">
+                            <h3>App Landing</h3>
+                            <p>Diseño responsive de alta conversión.</p>
+                        </div>
+                    </div>
+                    <!-- Proyecto 3 -->
+                    <div class="caja-portafolio">
+                        <div class="portafolio-img">
+                            <i class='bx bx-globe'></i>
+                        </div>
+                        <div class="portafolio-info">
+                            <h3>Web Corporativa</h3>
+                            <p>Estrategia digital para empresas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="seccion-blog" class="blog-fijo">
+            <div class="contenedor">
+                <div class="blog-header">
+                    <h2>Mi <span class="resaltado">Blog</span></h2>
+                    <p>Artículos sobre desarrollo, diseño y tecnología.</p>
+                </div>
+
+                <div class="blog-grid">
+                    <!-- Entrada 1 -->
+                    <article class="caja-blog">
+                        <div class="blog-tag">Abril 2026</div>
+                        <h3>Tendencias Web</h3>
+                        <p>Lo que viene este año en código.</p>
+                    </article>
+
+                    <!-- Entrada 2 -->
+                    <article class="caja-blog">
+                        <div class="blog-tag">Marzo 2026</div>
+                        <h3>Guía Responsive</h3>
+                        <p>Adaptación perfecta a móviles.</p>
+                    </article>
+
+                    <!-- Entrada 3 -->
+                    <article class="caja-blog">
+                        <div class="blog-tag">Febrero 2026</div>
+                        <h3>SEO Básico</h3>
+                        <p>Posiciona tu web en Google.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- SECCIÓN PROYECTOS (CLONADA DE PROYECTOS.HTML) -->
+        <section id="seccion-proyectos">
+
+            <div class="hero-contacto">
+                <div class="contenedor-hero">
+                    <h1>Nuestros Proyectos</h1>
+                </div>
+            </div>
+
+            <div class="contenedor formulario-caja">
+                <h2 class="contacto-texto">Trabajo creativo realizado con pasión para diferentes industrias.</h2>
+                <!-- Aquí he quitado el botón de "volver" porque ya estás en el inicio -->
+            </div>
+
+            <div class="contenedor galeria-proyectos">
+                <!-- Proyecto 1 -->
+                <div class="proyecto-card">
+                    <img src="tech-solutions.jpg" alt="Tech Company">
+                    <div class="info-proyecto">
+                        <h3>TechFlow Solutions</h3>
+                        <p>Branding & Web</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="proyecto-card">
+                    <img src="restaurante-arabe.jpg" alt="Restaurant">
+                    <div class="info-proyecto">
+                        <h3>El Gourmet Árabe</h3>
+                        <p>Diseño de Menú</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="proyecto-card">
+                    <img src="moda-urban.jpg" alt="Fashion">
+                    <div class="info-proyecto">
+                        <h3>Urban Style</h3>
+                        <p>E-commerce</p>
+                    </div>
+                </div>
+
+
+                <div class="proyecto-card">
+                    <img src="arquitectura-nexo.jpg" alt="Architecture">
+                    <div class="info-proyecto">
+                        <h3>Nexo Arquitectura</h3>
+                        <p>Identidad Visual</p>
+                    </div>
+                </div>
+
+                <div class="proyecto-card">
+                    <img src="cafe-aroma.jpg" alt="Coffee Shop">
+                    <div class="info-proyecto">
+                        <h3>Aroma Café</h3>
+                        <p>Packaging</p>
+                    </div>
+                </div>
+
+                <div class="proyecto-card">
+                    <img src="fitness-gym.jpg" alt="Gym">
+                    <div class="info-proyecto">
+                        <h3>Iron Fitness</h3>
+                        <p>App Design</p>
+                    </div>
+                </div>
+
+                <div class="proyecto-card">
+                    <img src="inmobiliaria-lujo.jpg" alt="Real Estate">
+                    <div class="info-proyecto">
+                        <h3>InmoLux</h3>
+                        <p>Marketing Digital</p>
+                    </div>
+                </div>
+
+                <div class="proyecto-card">
+                    <img src="salud-vital.jpg" alt="Health">
+                    <div class="info-proyecto">
+                        <h3>VitalCare</h3>
+                        <p>Web Médica</p>
+                    </div>
+                </div>
+
+                <div class="proyecto-card">
+                    <img src="viajes-nomada.jpg" alt="Travel">
+                    <div class="info-proyecto">
+                        <h3>Nomad Expeditions</h3>
+                        <p>Social Media</p>
+                    </div>
+                </div>
+                <div class="proyecto-card">
+                    <img src="luxury-auto.jpg" alt="Automotive">
+                    <div class="info-proyecto">
+                        <h3>Veloce Dynamics</h3>
+                        <p>E-commerce Automotriz</p>
+                    </div>
+                </div>
+                <!-- Proyecto 11: Arquitectura/Interiorismo -->
+                <div class="proyecto-card">
+                    <img src="interior-design.jpg" alt="Interior Design">
+                    <div class="info-proyecto">
+                        <h3>Studio Loft</h3>
+                        <p>Diseño de Interiores</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto 12: Música/Eventos -->
+                <div class="proyecto-card">
+                    <img src="music-event.jpg" alt="Music Event">
+                    <div class="info-proyecto">
+                        <h3>Neon Beats</h3>
+                        <p>Branding para Eventos</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+        <!-- SECCIÓN CONTACTO (IGUAL A PROYECTOS) -->
+        <section id="contacto">
+
+            <div class="hero-contacto">
+                <div class="contenedor-hero">
+                    <h1>Contáctanos</h1>
+                </div>
+            </div>
+
+            <div class="contenedor formulario-caja">
+                <h2 class="contacto-texto">Te asesoramos gratis y sin compromiso.</h2>
+
+                <form action="https://formspree.io/f/xnjlzeap" method="POST">
+                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+
+                    <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+
+                    <textarea name="mensaje" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+
+                    <!-- Redirección tras envío -->
+                    <input type="hidden" name="_next" value="index.html">
+
+                    <button type="submit" class="btn btn-primario">Enviar Mensaje</button>
+                </form>
+            </div>
+
+        </section>
+        <section id="seccion-mapa" class="mapa-full">
+            <div class="mapa-wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26168.328325983796!2d-5.926524333649646!3d35.002880789723046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0bc3021f1e0001%3A0x6b866c1b4b0e5c9b!2sKsar%20el-Kebir%2C%20Marruecos!5e0!3m2!1ses!2ses!4v1680000000000!5m2!1ses!2ses"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-container">
+                <!-- Columna 1: Navegación rápida -->
+                <div class="footer-col">
+                    <h3>Navegación —</h3>
+                    <ul>
+                        <li><a href="#inicio"><i class='bx bx-chevron-right'></i> Inicio</a></li>
+                        <li><a href="#sobre-mi"><i class='bx bx-chevron-right'></i> Sobre mí</a></li>
+                        <li><a href="#diseno-web-slider"><i class='bx bx-chevron-right'></i> Diseño Web</a></li>
+                        <li><a href="#seccion-proyectos"><i class='bx bx-chevron-right'></i> Proyectos</a></li>
+                        <li><a href="#contacto"><i class='bx bx-chevron-right'></i> Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 2: Contacto Directo -->
+                <div class="footer-col">
+                    <h3>Contacto —</h3>
+                    <p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Ksar+el-Kebir" target="_blank"
+                            class="contacto-link">
+                            <i class='bx bxs-map'></i> Calle Principal, Ksar el-Kebir
+                        </a>
+                    </p>
+                    <p>
+                        <a href="tel:+21261473881" class="contacto-link">
+                            <i class='bx bxs-phone'></i> +212 614 73 88 81
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:mchebcheb2019@gmail.com" class="contacto-link">
+                            <i class='bx bxs-envelope'></i> mchebcheb2019@gmail.com
+                        </a>
+                    </p>
+
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Ahmed.Chahmout.1088893" target="_blank"><i
+                                class='bx bxl-facebook-circle'></i></a>
+                        <a href="https://www.instagram.com/mchebcheb2019/" target="_blank"><i
+                                class='bx bxl-instagram'></i></a>
+                        <a href="https://wa.me/212614738881?text=Hola%20Ahmed" target="_blank"><i
+                                class='bx bxl-whatsapp'></i></a>
+                        <a href="https://www.linkedin.com/in/ahmed-chahmout-1a87723b5" target="_blank"><i
+                                class='bx bxl-linkedin-square'></i></a>
+                    </div>
+                </div>
+
+                <!-- Columna 3: Disponibilidad -->
+                <div class="footer-col">
+                    <h3>Horario —</h3>
+                    <div class="opening-hours">
+                        <p><strong>Lunes - Viernes:</strong></p>
+                        <span>09:00 - 19:00</span>
+                        <p><strong>Sábados:</strong></p>
+                        <span>10:00 - 14:00</span>
+                    </div>
+                </div>
+
+                <!-- Columna 4: Newsletter -->
+                <div class="footer-col">
+                    <h3>Boletín —</h3>
+                    <p>Suscríbete para recibir novedades sobre diseño y tecnología.</p>
+                    <form action="https://formspree.io/f/xnjlzeap" method="POST" class="newsletter-form">
+                        <input type="email" name="email" placeholder="Tu correo" required>
+                        <button type="submit">UNIRSE</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ahmed Design. Todos los derechos reservados.</p>
+                <<div class="footer-links">
+                    <a href="privacidad.html">Privacidad</a>
+                    <a href="cookies.html">Cookies</a>
+            </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

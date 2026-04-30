@@ -1,0 +1,406 @@
+@media (max-width: 768px) {
+    .menu-movil-icono {
+        display: block;
+    }
+
+    .menu-principal {
+        display: none;
+        width: 100%;
+        background: #fff;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 20px;
+        border-top: 1px solid #ddd;
+    }
+
+    .menu-principal.active {
+        display: block;
+    }
+
+    .menu-principal ul {
+        flex-direction: column;
+    }
+
+    .hero-contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* AJUSTES PARA MÓVILES (Mantiene el diseño de PC) */
+@media (max-width: 768px) {
+
+    /* 1. Forzamos que se queden en fila (Texto izq | Mockup der) */
+    .hero-contenedor {
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+        padding: 20px 10px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* 2. El texto ocupa el 60% y se queda a la izquierda */
+    .hero-texto {
+        flex: 0 0 60%;
+        text-align: left;
+    }
+
+    /* Título que se ajusta para no salirse de la pantalla */
+    .hero-texto h1 {
+        font-size: 1.3rem;
+        /* Tamaño pequeño para que quepa en su columna */
+        line-height: 1.1;
+    }
+
+    /* 3. El mockup ocupa el 40% y se queda a la derecha */
+    .hero-mockup {
+        flex: 0 0 40%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .hero-mockup img {
+        width: 100%;
+        /* La imagen se encoge para caber a la derecha */
+        height: auto;
+    }
+
+    /* 4. Botones pequeños para que quepan */
+    .hero-botones {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    /* 5. Título de Contacto (el h2) bien centrado */
+    h2 {
+        min-height: auto !important;
+        padding: 20px 0 !important;
+        margin: 0 auto !important;
+        text-align: center;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+}
+
+/* Arreglo extra para que la palabra CONTÁCTANOS no rompa el diseño */
+.hero-contacto h1 {
+    font-size: clamp(1.5rem, 7vw, 3.5rem) !important;
+    width: 100%;
+    text-align: center;
+}
+
+/* RESPONSIVE PROYECTOS */
+@media (max-width: 992px) {
+    .galeria-proyectos {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas en Tablets */
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .galeria-proyectos {
+        grid-template-columns: 1fr;
+        /* 1 sola columna en móviles */
+    }
+
+    .hero-proyectos h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* --- MENÚ PRINCIPAL --- */
+    .menu-principal {
+        width: 100%;
+        max-height: 85vh;
+        overflow-y: auto;
+        background-color: #fff;
+        display: none;
+        /* Se activa con la clase .active desde JS */
+    }
+
+    .menu-principal.active {
+        display: block;
+    }
+
+    .menu-principal ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-principal li {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    .menu-principal a {
+        padding: 15px 20px;
+        display: block;
+    }
+
+    /* --- SUBMENÚ: LA CLAVE DEL ARREGLO --- */
+    .submenu {
+        display: none !important;
+        /* Forzamos que esté oculto */
+        position: relative !important;
+        width: 100% !important;
+        background-color: #f9f9f9;
+        padding-left: 20px;
+    }
+
+    /* Solo se muestra cuando tocamos el elemento padre */
+    .tiene-submenu:hover .submenu,
+    .tiene-submenu:active .submenu {
+        display: block !important;
+    }
+
+    /* --- SLIDER AJUSTADO --- */
+    .slider-track {
+        animation-duration: 15s;
+    }
+
+    .card-diseno {
+        width: 240px;
+        height: 300px;
+        padding: 20px;
+    }
+
+    .card-diseno i {
+        font-size: 2.5rem;
+    }
+
+    @keyframes deslizar-infinito {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-260px * 4));
+        }
+    }
+}
+
+/* --- RESPONSIVE DESARROLLO --- */
+@media (max-width: 768px) {
+    .seccion-servicios-detalle {
+        padding: 40px 20px;
+    }
+
+    .grid-desarrollo {
+        grid-template-columns: 1fr;
+        /* Una sola columna en móvil */
+    }
+
+    .caja-desarrollo {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .lista-tech {
+        justify-content: center;
+    }
+}
+
+/* El nombre aquí debe ser IGUAL al de arriba */
+@keyframes deslizar-infinito {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Si tienes 4 cards originales de 300px, el movimiento es -1200px */
+        transform: translateX(calc(-300px * 4));
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* --- SECCIÓN DESARROLLO (MODO PC EN MÓVIL) --- */
+    .grid-desarrollo {
+        display: grid;
+        /* Forzamos 3 columnas siempre, aunque sea móvil */
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px;
+        /* Reducimos el espacio entre tarjetas al mínimo */
+        padding: 0 5px;
+    }
+
+    .caja-desarrollo {
+        padding: 15px 10px;
+        /* Reducimos mucho el padding interno */
+        border-radius: 10px;
+        text-align: center;
+        min-height: 220px;
+        /* Altura mínima para que no se vean chatas */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Hacemos los textos más pequeños para que no se amontonen */
+    .caja-desarrollo h3 {
+        font-size: 0.8rem !important;
+        /* Texto muy compacto */
+        margin-bottom: 5px;
+    }
+
+    .caja-desarrollo p {
+        font-size: 0.65rem !important;
+        line-height: 1.2;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        /* Corta el texto a 3 líneas para que no crezca la card */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .icono-flotante {
+        font-size: 1.5rem !important;
+        /* Iconos más pequeños */
+        margin-bottom: 10px;
+    }
+
+    /* Ocultamos las etiquetas de tecnología en móvil para ganar espacio */
+    .lista-tech {
+        display: none !important;
+    }
+
+    .grid-desarrollo {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
+        /* Espacio entre tarjetas */
+        padding: 20px 10px !important;
+        /* Espacio a los lados de la pantalla */
+        align-items: stretch;
+        /* Para que todas midan lo mismo de alto */
+    }
+}
+
+@media (max-width: 768px) {
+    .galeria-proyectos {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        /* 2 columnas para que luzcan las fotos */
+        gap: 15px !important;
+        padding: 0 10px !important;
+    }
+}
+
+/* Ajuste para pantallas pequeñas para que no se amontone el texto */
+@media (max-width: 600px) {
+    .mantenimiento-card {
+        padding: 10px 5px;
+    }
+
+    .mantenimiento-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .mantenimiento-card p {
+        display: none;
+        /* En móvil ocultamos el párrafo corto para que las 3 cards quepan bien */
+    }
+}
+
+/* Ajuste móvil para que no se rompa la línea de 3 */
+@media (max-width: 600px) {
+    .caja-hosting h3 {
+        font-size: 0.9rem;
+    }
+
+    .caja-hosting p {
+        display: none;
+    }
+}
+
+/* Ajuste mínimo para móviles muy estrechos para que no se amontone */
+@media (max-width: 600px) {
+    .sobre-mi-flex {
+        gap: 20px;
+    }
+
+    .marco-estilizado {
+        width: 120px;
+        height: 180px;
+    }
+
+    .marco-estilizado i {
+        font-size: 4rem;
+    }
+
+    .sobre-mi-contenido h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Responsive: Mantenemos las 3 columnas pero ajustamos textos */
+@media (max-width: 768px) {
+    .portafolio-grid {
+        gap: 10px !important;
+    }
+
+    .portafolio-info h3 {
+        font-size: 0.9rem;
+    }
+
+    .portafolio-info p {
+        display: none;
+        /* Quitamos descripción en móvil para que no se amontone */
+    }
+
+    .portafolio-img {
+        height: 100px;
+    }
+}
+
+/* Ajuste fino para móviles muy pequeños */
+@media (max-width: 600px) {
+    .caja-blog h3 {
+        font-size: 0.8rem;
+    }
+
+    .caja-blog p {
+        display: none;
+    }
+
+    /* Ocultamos texto largo para que no se amontone */
+    .blog-tag {
+        font-size: 0.6rem;
+    }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-col ul li a {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .newsletter-form {
+        justify-content: center;
+    }
+}

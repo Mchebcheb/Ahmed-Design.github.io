@@ -1,0 +1,1263 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Top Bar */
+.top-bar {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 0.8rem;
+}
+
+.top-bar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-info {
+    display: flex;
+    gap: 15px;
+}
+
+.top-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Cabecera y Menú */
+.cabecera {
+    background: #e6dfdf;
+    padding: 20px 0;
+    border-bottom: 2px solid #ff6600;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.cabecera .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.logo h1 span {
+    color: #ff6600;
+}
+
+.menu-principal>ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    padding: 5px 0;
+}
+
+/* Submenú */
+.tiene-submenu {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 10px 0;
+}
+
+.tiene-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu li a {
+    display: block;
+    padding: 8px 20px;
+}
+
+/* Hero */
+.hero-contenedor {
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    padding: 80px 60px;
+    /* 80px arriba y abajo, 20px a los lados */
+    gap: 40px;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-mockup {
+    flex: 1;
+}
+
+/* Este es el estado NORMAL de la imagen */
+.hero-mockup img {
+    /* 1. Bordes redondeados: esquinas suaves */
+    border-radius: 15px;
+
+    /* 2. Box Shadow: Una sombra suave para dar profundidad */
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+    /* 3. Transición: CRÍTICO para que el efecto hover sea suave */
+    transition: all 0.4s ease;
+}
+
+/* Este es el estado al pasar el RATÓN */
+.hero-mockup img:hover {
+    /* 1. Sombra más fuerte: para que parezca que "se levanta" */
+    box-shadow: 0 20px 40px rgb(255, 0, 0);
+
+    /* 2. Movimiento: lo subimos un poquito (transform) */
+    transform: translateY(-10px);
+
+    /* 3. Opcional: Un pequeño efecto de brillo/escala */
+    /* transform: translateY(-10px) scale(1.02); */
+}
+
+/* Responsive */
+.menu-movil-icono {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    /* Esto hace que el cambio sea suave */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el ratón */
+.menu-principal>ul>li>a:hover {
+    color: #ff6600;
+}
+
+.submenu li a:hover {
+    background-color: #f4f4f4;
+    /* Fondo gris claro al pasar el ratón */
+    color: #ff6600;
+    /* Cambio de color de letra a naranja */
+    padding-left: 25px;
+    /* Un pequeño efecto de movimiento lateral */
+    transition: all 0.3s ease;
+}
+
+/* Estilo para el enlace activo */
+.menu-principal a.active {
+    color: #ff6600 !important;
+    /* Color naranja para marcarlo */
+    border-bottom: 2px solid #ff6600;
+    /* La raya debajo */
+    padding-bottom: 2px;
+    /* Un poco de aire entre el texto y la raya */
+}
+
+/* Contenedor de botones */
+.hero-botones {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Estilo base de los botones */
+.btn {
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+/* Botón Solicitar Información (Llamativo) */
+.btn-primario {
+    background-color: #ff6600;
+    color: white;
+    border: 2px solid #333;
+}
+
+.btn-primario:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+}
+
+/* Botón Ver Proyectos (Elegante) */
+.btn-secundario {
+    background-color: #ff6600;
+    color: #ffffff;
+    border: 2px solid #333;
+}
+
+.btn-secundario:hover {
+    background-color: #333;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Ajuste del texto */
+.hero-texto h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: rgb(255, 0, 51);
+}
+
+h1 span {
+    color: black;
+}
+
+.hero-texto p {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 25px;
+
+    /* Esto es lo que soluciona el problema de que sea muy largo */
+    max-width: 500px;
+
+    /* Asegura que no se vea forzado */
+    line-height: 1.6;
+}
+
+/* Sección superior de contacto con mockup.png como fondo */
+.hero-contacto {
+    height: 350px;
+    /* Ajusta la altura a tu gusto */
+
+    /* El truco: Degradado negro al 50% de opacidad + la imagen */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('mockup.png');
+
+    /* Propiedades para que la imagen cubra todo el espacio sin deformarse */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Centramos el título */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Un pequeño detalle de lujo: desenfoque suave si la imagen es muy nítida */
+    /* backdrop-filter: blur(2px); */
+    /* Descomenta esto si quieres un efecto más 'premium' */
+}
+
+.hero-contacto h1 {
+    color: #ffffff;
+    /* Cambiamos el tamaño fijo por uno que se adapte al ancho del móvil */
+    font-size: clamp(1.5rem, 8vw, 3.5rem);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    /* Evita que toque los bordes laterales */
+}
+
+/* Busca esta clase en tu CSS */
+.formulario-caja {
+    /* O .formulario-contacto */
+    max-width: 800px;
+    /* Un ancho más contenido queda mejor */
+
+    /* --- EL CAMBIO ESTÁ AQUÍ --- */
+    /* margin: -120px auto 50px auto;  <-- ESTO ES LO QUE ESTÁ MAL */
+    margin: 10px auto 20px auto;
+    /* <-- PON ESTO: Espacio positivo arriba y abajo */
+    /* --------------------------- */
+
+    background: white;
+    padding: -10px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+    /* Para asegurarnos de que todo dentro se centre bien */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario-caja input,
+.formulario-caja textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #0f0000;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.formulario-caja textarea {
+    height: 150px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    min-height: 130px;
+    /* Ajusta esta altura según el espacio que quieras */
+    margin: 0;
+    /* Elimina el margin-top para que no desplace el centrado */
+    font-size: 35px;
+}
+
+/* --- SECCIÓN PROYECTOS --- */
+.hero-proyectos {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('mockup.png');
+    color: white;
+    padding: 80px 0 40px;
+    text-align: center;
+}
+
+.btn-volver {
+    color: #00d9ff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Galería en Grid */
+.galeria-proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas en PC */
+    gap: 25px;
+    padding: 50px 0;
+}
+
+.proyecto-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.proyecto-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.info-proyecto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover img {
+    transform: scale(1.1);
+}
+
+.proyecto-card:hover .info-proyecto {
+    transform: translateY(0);
+}
+
+.btn-secundario-volver {
+    display: inline-block;
+    color: #0044cc;
+    /* El azul de tu diseño de contacto */
+    font-weight: bold;
+    /* Negrita */
+    text-decoration: none;
+    /* Quita el subrayado feo */
+    margin-top: 20px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.btn-secundario-volver:hover {
+    color: #002266;
+    /* Un azul más oscuro al pasar el ratón */
+    text-decoration: underline;
+    /* Si quieres que se subraye solo al pasar el ratón */
+}
+
+/* Reducimos el espacio de la sección entera */
+.seccion-slider {
+    padding: 40px 0;
+    /* Antes era 80px, lo bajamos a la mitad */
+    background: #f4f7f6;
+    overflow: hidden;
+}
+
+/* --- CONTENEDOR DE TÍTULO UNIFICADO --- */
+.contenedor-titulo {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Espacio corto hacia las cards */
+    display: block;
+    /* Aseguramos que no se comporte como flex si no hace falta */
+}
+
+/* --- H2 REFORMADO (SIN HUECOS) --- */
+.contenedor-titulo h2 {
+    margin: 0 auto;
+    padding: 10px 0;
+    /* Solo un poco de aire arriba y abajo */
+    font-size: 2.2rem;
+    line-height: 1.2;
+    min-height: auto !important;
+    /* ¡OJO! Esto mata el hueco de 130px que tenías */
+    display: inline-block;
+    /* Para que el subrayado o el ancho sea solo del texto */
+    width: 100%;
+}
+
+/* El contenedor que recorta la vista */
+.slider-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* La línea que contiene todas las tarjetas y se mueve */
+.slider-track {
+    display: flex;
+    width: calc(300px * 8);
+    /* Ancho de cada card * total de cards (4 originales + 4 copia) */
+    animation: deslizar-infinito 20s linear infinite;
+}
+
+.slider-track:hover {
+    animation-play-state: paused;
+    /* Se para cuando pones el ratón encima */
+}
+
+/* --- ESTILO DE LA TARJETA (BASE) --- */
+.card-diseno {
+    width: 280px;
+    height: 350px;
+    background: white;
+    /* Fondo inicial */
+    margin: 0 10px;
+    padding: 40px 30px;
+    border-radius: 15px;
+
+    /* Sombra suave inicial */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+
+    /* IMPORTANTE: Transición suave para TODOS los cambios (color, movimiento, sombra) */
+    transition: all 0.4s ease;
+
+    /* Preparamos el movimiento */
+    transform: translateY(0);
+    cursor: pointer;
+    /* Cambia el cursor para indicar que es interactivo */
+}
+
+/* Elementos internos (Base) */
+.card-diseno i {
+    font-size: 3rem;
+    color: #0044cc;
+    /* Azul inicial */
+    margin-bottom: 20px;
+    transition: color 0.4s ease;
+}
+
+.card-diseno h3 {
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    /* Negro inicial */
+    margin-bottom: 15px;
+    transition: color 0.4s ease;
+}
+
+.card-diseno p {
+    font-size: 0.95rem;
+    color: #666;
+    /* Gris inicial */
+    line-height: 1.5;
+    transition: color 0.4s ease;
+}
+
+/* ===================================================
+   ¡LA MAGIA AQUÍ! Efectos al pasar el ratón (:hover) 
+   =================================================== */
+
+.card-diseno:hover {
+    /* 1. CAMBIO DE COLOR DE FONDO */
+    background-color: #0044cc;
+    /* Se vuelve azul */
+
+    /* 2. MOVIMIENTO (Se eleva 15px) */
+    transform: translateY(-15px);
+
+    /* 3. SOMBRA MÁS INTENSA (Efecto flotante) */
+    box-shadow: 0 20px 40px rgba(0, 68, 204, 0.3);
+    /* Sombra azulada */
+}
+
+/* Cambiamos el color de los elementos INTERNOS cuando la CARD está en hover */
+.card-diseno:hover i,
+.card-diseno:hover h3,
+.card-diseno:hover p {
+    color: #ffffff;
+    /* Todo el texto e icono se vuelven blancos */
+}
+
+/* Esto asegura que la palabra azul nunca se pegue a la anterior */
+.resaltado {
+    color: #0044cc;
+    margin-left: 8px;
+    /* Forzamos un pequeño espacio extra a la izquierda */
+    display: inline-block;
+    /* Necesario para que el margen funcione bien */
+}
+
+#diseno-web-slider {
+    scroll-margin-top: 80px;
+    /* Ajusta los px según la altura de tu menú */
+}
+
+/* Reducimos el padding superior de la sección */
+.seccion-servicios-detalle {
+    padding: 30px 0 80px 0;
+    /* 30px arriba (antes era 80px), 80px abajo */
+    background-color: #fff;
+}
+
+/* Ajustamos el contenedor del título para que no empuje tanto */
+.seccion-servicios-detalle .contenedor-titulo {
+    margin-bottom: 20px;
+    /* Menos espacio entre el título y las tarjetas */
+}
+
+/* Por si el h2 tiene un min-height o margin raro */
+.seccion-servicios-detalle h2 {
+    min-height: auto !important;
+    /* Quitamos el centrado forzado que usamos en otras secciones */
+    padding: 0 !important;
+    margin-bottom: 10px;
+}
+
+.grid-desarrollo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.caja-desarrollo {
+    background: #fdfdfd;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    position: relative;
+    overflow: hidden;
+    /* Subimos a 0.4s para que sea igual de suave que la otra */
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+/* EFECTO HOVER: Fondo azul y elevación */
+.caja-desarrollo:hover {
+    background-color: #0044cc;
+    /* Tu azul */
+    transform: translateY(-15px);
+    /* Se eleva igual que diseño */
+    box-shadow: 0 20px 40px rgba(0, 68, 204, 0.3);
+    border-color: #0044cc;
+}
+
+/* Cambiamos el color de los textos e icono a BLANCO al pasar el ratón */
+.caja-desarrollo:hover h3,
+.caja-desarrollo:hover p,
+.caja-desarrollo:hover .icono-flotante {
+    color: #ffffff !important;
+}
+
+/* Si tienes la lista de tecnologías, también la ponemos blanca */
+.caja-desarrollo:hover .lista-tech li {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* Estilos de los elementos internos (sin hover) */
+.icono-flotante {
+    font-size: 2.5rem;
+    color: #0044cc;
+    margin-bottom: 20px;
+    transition: color 0.4s ease;
+    /* Para que el cambio a blanco sea suave */
+}
+
+.caja-desarrollo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    transition: color 0.4s ease;
+}
+
+.caja-desarrollo p {
+    transition: color 0.4s ease;
+}
+
+.lista-tech {
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.lista-tech li {
+    background: #f0f4ff;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: #0044cc;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.caja-desarrollo {
+    min-height: 200px !important;
+    /* Ajusta según el texto que tengas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Mantiene el icono arriba y el texto centrado */
+}
+
+#seccion-desarrollo {
+    /* Ajusta este número (80px o 100px) según el alto de tu cabecera */
+    scroll-margin-top: 100px;
+}
+
+/* --- SECCIÓN MANTENIMIENTO: SIN ESPACIOS Y 3 EN LÍNEA --- */
+
+.mantenimiento-fijo {
+    padding: 40px 0 !important;
+    /* Control total del aire arriba/abajo */
+    margin: 0 !important;
+    background-color: #f9f9f9;
+    /* Color de fondo suave para diferenciarlo */
+}
+
+/* 1. Eliminar el espacio del título */
+.mantenimiento-header {
+    text-align: center;
+    margin-bottom: 25px !important;
+}
+
+.mantenimiento-header h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: auto !important;
+    /* ESTO es lo que quita el espacio de 130px */
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+.mantenimiento-header p {
+    margin: 10px 0 0 0 !important;
+    padding: 0 !important;
+}
+
+/* 2. Forzar 3 columnas siempre (PC, Tablet y Móvil) */
+.mantenimiento-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    /* 3 columnas iguales */
+    gap: 15px !important;
+    max-width: 1200px;
+    margin: 0 auto !important;
+    padding: 0 20px;
+}
+
+/* 3. Estilo de las tarjetas */
+.mantenimiento-card {
+    background: #ffffff;
+    padding: 20px 10px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.mantenimiento-card i {
+    font-size: 2.2rem;
+    color: #007bff;
+    /* Tu color azul */
+    margin-bottom: 10px;
+    display: block;
+}
+
+.mantenimiento-card h3 {
+    margin-bottom: 5px !important;
+    font-size: 1.1rem;
+}
+
+.mantenimiento-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 !important;
+}
+
+/* --- EFECTO HOVER: Fondo azul y elevación (Estilo Desarrollo) --- */
+.mantenimiento-card {
+    transition: all 0.4s ease-in-out !important;
+    /* Para que la elevación sea fluida */
+    cursor: pointer;
+}
+
+.mantenimiento-card:hover {
+    background-color: #0044cc !important;
+    /* Tu azul */
+    transform: translateY(-15px) !important;
+    /* Se eleva igual que desarrollo */
+    box-shadow: 0 20px 40px rgba(0, 68, 204, 0.3) !important;
+    border-color: #0044cc !important;
+}
+
+/* Cambiamos el color de los textos e icono a BLANCO al pasar el ratón */
+.mantenimiento-card:hover h3,
+.mantenimiento-card:hover p,
+.mantenimiento-card:hover i {
+    color: #ffffff !important;
+}
+
+/* --- SECCIÓN HOSTING --- */
+.hosting-fijo {
+    padding: 40px 0 !important;
+    background-color: #ffffff;
+    /* Alternamos color para que se distinga */
+}
+
+.hosting-header {
+    text-align: center;
+    margin-bottom: 30px !important;
+}
+
+.hosting-header h2 {
+    margin: 0 !important;
+    min-height: auto !important;
+}
+
+/* GRID: 3 en línea siempre */
+.hosting-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 15px !important;
+    max-width: 1200px;
+    margin: 0 auto !important;
+}
+
+/* LA TARJETA (Igual que desarrollo/mantenimiento) */
+.caja-hosting {
+    background: #f9f9f9;
+    padding: 25px 15px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: all 0.4s ease-in-out !important;
+    cursor: pointer;
+}
+
+.caja-hosting i {
+    font-size: 2.5rem;
+    color: #0044cc;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* --- EFECTO HOVER (El que nos gusta) --- */
+.caja-hosting:hover {
+    background-color: #0044cc !important;
+    transform: translateY(-15px) !important;
+    box-shadow: 0 20px 40px rgba(0, 68, 204, 0.3) !important;
+    border-color: #0044cc !important;
+}
+
+/* Texto a BLANCO al pasar el ratón */
+.caja-hosting:hover h3,
+.caja-hosting:hover p,
+.caja-hosting:hover i {
+    color: #ffffff !important;
+}
+
+/* Esto hace que al saltar a la sección, deje un margen arriba para que no la tape el menú */
+#seccion-mantenimiento,
+#seccion-hosting,
+#sobre-mi {
+    scroll-margin-top: 80px;
+    /* Ajusta estos px según la altura de tu menú */
+}
+
+/* Suaviza el movimiento del scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- SECCIÓN SOBRE MÍ: ESTILO PC SIEMPRE --- */
+
+/* 1. Ajuste de salto (para que el menú no tape el título) */
+#sobre-mi {
+    scroll-margin-top: 90px !important;
+    padding: 80px 0 !important;
+    background-color: rgb(249, 249, 249);
+}
+
+/* 2. Estructura Flex (Forzamos que sea siempre en fila) */
+.sobre-mi-flex {
+    display: flex !important;
+    flex-direction: row !important;
+    /* Fuerza la fila incluso en móvil */
+    align-items: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Imagen a la izquierda */
+.sobre-mi-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.marco-estilizado {
+    width: 250px;
+    /* Reducimos un poco para que quepa bien en pantallas pequeñas */
+    height: 320px;
+    background: #0044cc;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 15px 15px 0px #f0f0f0;
+}
+
+.marco-estilizado i {
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* Texto a la derecha */
+.sobre-mi-contenido {
+    flex: 1.5;
+}
+
+.sobre-mi-contenido h2 {
+    margin: 0 0 10px 0 !important;
+    min-height: auto !important;
+    font-size: 2rem;
+}
+
+.subtitulo-personal {
+    font-weight: bold;
+    color: #0044cc;
+    margin-bottom: 15px !important;
+}
+
+/* Etiquetas de habilidades */
+.skills-line {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skills-line span {
+    background: #f4f4f4;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #0044cc;
+    font-weight: bold;
+    border-bottom: 2px solid #0044cc;
+}
+
+/* --- SECCIÓN PORTAFOLIO --- */
+.portafolio-fijo {
+    padding: 60px 0 !important;
+    background-color: #f4f4f4;
+    /* Fondo gris claro para resaltar las tarjetas blancas */
+    scroll-margin-top: 90px !important;
+}
+
+.portafolio-header {
+    text-align: center;
+    margin-bottom: 40px !important;
+}
+
+.portafolio-header h2 {
+    margin: 0 !important;
+    min-height: auto !important;
+}
+
+/* GRID: 3 en línea siempre (PC y Responsive) */
+.portafolio-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+    max-width: 1200px;
+    margin: 0 auto !important;
+    padding: 0 20px;
+}
+
+/* LA TARJETA */
+.caja-portafolio {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    transition: all 0.4s ease-in-out !important;
+    cursor: pointer;
+    text-align: center;
+}
+
+.portafolio-img {
+    background: #e9e9e9;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portafolio-img i {
+    font-size: 4rem;
+    color: #0044cc;
+}
+
+.portafolio-info {
+    padding: 20px;
+}
+
+/* --- HOVER ESTILO AHMED --- */
+.caja-portafolio:hover {
+    background-color: #0044cc !important;
+    transform: translateY(-15px) !important;
+    box-shadow: 0 20px 40px rgba(0, 68, 204, 0.3) !important;
+    border-color: #0044cc !important;
+}
+
+/* Texto a BLANCO e icono a BLANCO en hover */
+.caja-portafolio:hover h3,
+.caja-portafolio:hover p,
+.caja-portafolio:hover .portafolio-img i {
+    color: #ffffff !important;
+}
+
+.caja-portafolio:hover .portafolio-img {
+    background: rgba(255, 255, 255, 0.1);
+    /* Sutil transparencia en el fondo de la imagen */
+}
+
+/* --- SECCIÓN BLOG: REPARADA (SIN ESPACIOS GIGANTES) --- */
+
+#seccion-blog {
+    /* Ajustamos el salto para que el título no se pierda pero no deje hueco */
+    scroll-margin-top: 65px !important;
+    /* Bajamos el padding de 60px a 20px para eliminar el desierto blanco */
+    padding: 20px 0 40px 0 !important;
+    background-color: #ffffff;
+}
+
+.blog-header {
+    text-align: center;
+    /* Reducimos el margen inferior del cabezal */
+    margin-bottom: 20px !important;
+}
+
+.blog-header h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: auto !important;
+}
+
+.blog-header p {
+    margin: 5px 0 0 0 !important;
+    /* Pegamos el subtítulo al título */
+}
+
+/* GRID: Siempre 3 en línea (PC y Móvil) */
+.blog-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 15px !important;
+    max-width: 1200px;
+    margin: 0 auto !important;
+    padding: 0 15px;
+}
+
+/* Tarjeta Blog */
+.caja-blog {
+    background: #f9f9f9;
+    padding: 20px 15px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    transition: all 0.4s ease-in-out !important;
+    cursor: pointer;
+    text-align: center;
+}
+
+.blog-tag {
+    background: #0044cc;
+    color: white;
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.caja-blog h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.caja-blog p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.3;
+}
+
+.leer-mas {
+    display: block;
+    margin-top: 10px;
+    color: #0044cc;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* --- EFECTO HOVER AHMED (Azul y Elevación) --- */
+.caja-blog:hover {
+    background-color: #0044cc !important;
+    transform: translateY(-15px) !important;
+    box-shadow: 0 20px 40px rgba(0, 68, 204, 0.3) !important;
+    border-color: #0044cc !important;
+}
+
+.caja-blog:hover h3,
+.caja-blog:hover p,
+.caja-blog:hover .leer-mas {
+    color: #ffffff !important;
+}
+
+.caja-blog:hover .blog-tag {
+    background: #ffffff;
+    color: #0044cc;
+}
+
+/* --- AJUSTE DE ESPACIADO PORTAFOLIO --- */
+
+#seccion-portafolio {
+    /* Esto evita que el menú tape el título al hacer clic */
+    scroll-margin-top: 70px !important;
+
+    /* Quitamos el espacio en blanco de arriba */
+    padding-top: 20px !important;
+    margin-top: 0 !important;
+}
+
+/* Si el título "Mi Portafolio" tiene mucho margen arriba, lo reducimos */
+#seccion-portafolio h2,
+.mi-portafolio-titulo {
+    margin-top: 10px !important;
+    padding-top: 0 !important;
+}
+
+/* --- ESTILOS DEL FOOTER --- */
+.footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 60px 0 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer-col h3 {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #ff6600;
+    /* Tu color naranja o el que prefieras */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.contacto-link {
+    color: #bbb;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.contacto-link i {
+    color: #ff6600;
+    margin-right: 10px;
+}
+
+.contacto-link:hover {
+    color: #ffffff;
+}
+
+/* Redes Sociales */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: #ffffff;
+    background: #333;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.social-links a:hover {
+    background: #ff6600;
+    transform: translateY(-5px);
+}
+
+/* Newsletter */
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    border: none;
+    background: #333;
+    color: white;
+    width: 70%;
+    border-radius: 5px 0 0 5px;
+}
+
+.newsletter-form button {
+    padding: 10px;
+    background: #ff6600;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0;
+    transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+    background: #e65c00;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid #333;
+    margin-top: 50px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.footer-bottom .footer-links {
+    margin-top: 10px;
+}
+
+.footer-bottom .footer-links a {
+    color: #888;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
