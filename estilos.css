@@ -17,18 +17,22 @@ body {
     padding: 0 20px;
 }
 
-/* Top Bar */
+/* Top Bar - Versión Estilizada y Delgada */
 .top-bar {
     background: #1a1a1a;
     color: #fff;
-    padding: 10px 0;
-    font-size: 0.8rem;
+    /* Bajamos de 10px a 4px para que sea mucho más fina */
+    padding: 0, 5px 0 !important;
+    /* Un pelín más pequeña para que no fuerce la altura */
+    font-size: 0.75rem !important;
 }
 
 .top-bar-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* Nos aseguramos de que no haya una altura mínima */
+    min-height: auto !important;
 }
 
 .top-info {
